@@ -20,7 +20,7 @@ export interface Tile {
     MatButtonModule,
     MatIconModule],
   templateUrl: './test.html',
-  styleUrl: './test.scss'
+  styleUrls: ['./test.scss']
 })
 export class Test {
 
