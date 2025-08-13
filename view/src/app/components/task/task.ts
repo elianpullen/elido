@@ -1,19 +1,25 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  template: `<h1>{{ userName }}</h1>`,
-  styleUrls: ['./task.css']  // fix typo here
+  templateUrl: './task.html',
+  styleUrls: ['./task.css']
 })
 export class Task {
-  protected readonly title = signal('elido');
-  userName = '';
+  title = '';
+  description = '';
 
   constructor(private http: HttpClient) {
-    this.http.get<{ name: string }>('http://127.0.0.1:8000/api/test').subscribe({
-      next: data => this.userName = data.name,
+    this.http.get<{
+      title: string;
+      description: string
+    }>('http://127.0.0.1:8000/api/task').subscribe({
+      next: data => {
+        this.title = data.title;
+        this.description = data.description;
+      },
       error: err => console.error('API error', err)
     });
   }

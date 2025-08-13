@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
-Route::get('/test', function (Request $request) {
-    return response()->json(['name' => 'Test API']);
+Route::get('/task', function (Request $request) {
+    return response()->json([
+        'title' => 'Test API',
+        'description' => 'Test123',
+    ]);
 });
