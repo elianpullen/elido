@@ -1,0 +1,71 @@
+# Angular:
+
+# Compiled output
+view/dist
+view/tmp
+view/out-tsc
+view/bazel-out
+
+# Node
+view/node_modules
+view/npm-debug.log
+view/yarn-error.log
+
+# IDEs and editors
+view/.idea/
+view/.project
+view/.classpath
+view/.c9/
+view/*.launch
+view/.settings/
+view/*.sublime-workspace
+
+# Visual Studio Code
+view/.vscode/*
+view/!.vscode/settings.json
+view/!.vscode/tasks.json
+view/!.vscode/launch.json
+view/!.vscode/extensions.json
+view/.history/*
+
+# Miscellaneous
+view/.angular/cache
+view/.sass-cache/
+view/connect.lock
+view/coverage
+view/libpeerconnection.log
+view/testem.log
+view/typings
+
+# System files
+view/.DS_Store
+view/Thumbs.db
+
+
+# Laravel:
+api/*.log
+api/.DS_Store
+api/.env
+api/.env.backup
+api/.env.production
+api/.phpactor.json
+api/.phpunit.result.cache
+api/.fleet
+api/.idea
+api/.nova
+api/.phpunit.cache
+api/.vscode
+api/.zed
+api/auth.json
+api/node_modules
+api/public/build
+api/public/hot
+api/public/storage
+api/storage/*.key
+api/storage/pail
+api/vendor
+api/Homestead.json
+api/Homestead.yaml
+api/Thumbs.db
+
+.editorconfig
