@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-root',
   standalone: true,
   templateUrl: './task.html',
-  styleUrls: ['./task.css']
+  styleUrls: ['./task.scss']
 })
 export class Task {
   title = '';
