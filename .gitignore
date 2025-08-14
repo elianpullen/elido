@@ -1,45 +1,45 @@
 # Angular:
 
 # Compiled output
-view/dist
-view/tmp
-view/out-tsc
-view/bazel-out
+frontend/dist
+frontend/tmp
+frontend/out-tsc
+frontend/bazel-out
 
 # Node
-view/node_modules
-view/npm-debug.log
-view/yarn-error.log
+frontend/node_modules
+frontend/npm-debug.log
+frontend/yarn-error.log
 
 # IDEs and editors
-view/.idea/
-view/.project
-view/.classpath
-view/.c9/
-view/*.launch
-view/.settings/
-view/*.sublime-workspace
+frontend/.idea/
+frontend/.project
+frontend/.classpath
+frontend/.c9/
+frontend/*.launch
+frontend/.settings/
+frontend/*.sublime-workspace
 
 # Visual Studio Code
-view/.vscode/*
-view/!.vscode/settings.json
-view/!.vscode/tasks.json
-view/!.vscode/launch.json
-view/!.vscode/extensions.json
-view/.history/*
+frontend/.vscode/*
+frontend/!.vscode/settings.json
+frontend/!.vscode/tasks.json
+frontend/!.vscode/launch.json
+frontend/!.vscode/extensions.json
+frontend/.history/*
 
 # Miscellaneous
-view/.angular/cache
-view/.sass-cache/
-view/connect.lock
-view/coverage
-view/libpeerconnection.log
-view/testem.log
-view/typings
+frontend/.angular/cache
+frontend/.sass-cache/
+frontend/connect.lock
+frontend/coverage
+frontend/libpeerconnection.log
+frontend/testem.log
+frontend/typings
 
 # System files
-view/.DS_Store
-view/Thumbs.db
+frontend/.DS_Store
+frontend/Thumbs.db
 
 
 # Laravel:
