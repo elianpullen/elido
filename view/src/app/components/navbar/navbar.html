@@ -33,6 +33,11 @@
               class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
               Tasks
             </a>
+            <a [routerLink]="['/task/create']" routerLinkActive="bg-gray-950/50 text-white"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+              Create task
+            </a>
             <a [routerLink]="['/test']" routerLinkActive="bg-gray-950/50 text-white"
               [routerLinkActiveOptions]="{ exact: true }"
               class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
