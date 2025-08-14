@@ -2,14 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
-Route::get('/task', function (Request $request) {
-    return response()->json([
-        'title' => 'Test API',
-        'description' => 'Test123',
-    ]);
-});
+Route::post('/task', [TaskController::class, 'index']);
+Route::post('/task/create', [TaskController::class, 'store']);

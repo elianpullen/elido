@@ -12,7 +12,10 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json([
+            'title' => 'Test API',
+            'description' => 'Test123',
+        ]);
     }
 
     /**
@@ -28,7 +31,9 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        #$item = Task::create($request->only('title'));
+        $item = Task::create($input = $request->input());
+        return response()->json($item, 201);
     }
 
     /**
