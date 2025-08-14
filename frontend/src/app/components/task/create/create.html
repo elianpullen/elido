@@ -1,1 +1,13 @@
-<p>create works!</p>
+<div class="container" [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <textarea matInput placeholder="Textarea" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <button (click)="addItem()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
+        Add Item
+    </button>
+</div>

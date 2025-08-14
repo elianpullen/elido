@@ -9,7 +9,7 @@ export class Task {
 
   constructor(private http: HttpClient) { }
 
-  createItem(title: string) {
-    return this.http.post(this.apiUrl, { title });
+  createItem(data: any) {
+    return this.http.post(this.apiUrl, data);
   }
 }
