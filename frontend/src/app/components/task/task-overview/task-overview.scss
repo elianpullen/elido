@@ -1,0 +1,15 @@
+.todo-card {
+    max-width: 400px;
+    width: 100%;
+    margin: 16px auto;
+    box-sizing: border-box;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  mat-icon {
+    font-size: 20px;
+  }

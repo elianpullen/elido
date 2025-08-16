@@ -7,24 +7,22 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
-export interface Task {
-  title: string;
-  description: string;
-}
+import { Task } from '../../../models/task.model';
+import { environment } from '../../../../environments/environment.development';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-task-overview',
   standalone: true,
   imports: [MatListModule, MatDividerModule, MatGridListModule, MatCardModule, MatButtonModule, MatIconModule, CommonModule],
-  templateUrl: './task.html',
-  styleUrls: ['./task.scss'],
+  templateUrl: './task-overview.html',
+  styleUrls: ['./task-overview.scss'],
 })
-export class Task {
+export class TaskOverview {
+  apiUrl: string = environment.apiUrl; // TODO: remove in future, same as add.task
   tasks: Task[] = [];
 
   constructor(private http: HttpClient) {
-    this.http.get<Task[]>('http://127.0.0.1:8000/api/task').subscribe({
+    this.http.get<Task[]>(this.apiUrl + '/api/task').subscribe({
       next: data => {
         this.tasks = data;
       },

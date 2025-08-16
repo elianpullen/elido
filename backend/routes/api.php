@@ -7,4 +7,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/task', [TaskController::class, 'index']);
-Route::post('/task/create', [TaskController::class, 'store']);
+Route::post('/task/add', [TaskController::class, 'store']);

@@ -3,30 +3,30 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
-import { Task } from '../../../services/task';
+import { TaskService } from '../../../services/taskservice';
 
 @Component({
-  selector: 'app-create',
+  selector: 'app-task-add',
   standalone: true,
   imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatButtonModule],
-  templateUrl: './create.html',
-  styleUrls: ['./create.scss'],
+  templateUrl: './task-add.html',
+  styleUrls: ['./task-add.scss'],
 })
-export class Create {
+export class TaskAdd {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private taskService: Task) {
+  constructor(private fb: FormBuilder, private taskService: TaskService) {
     this.form = this.fb.group({
       title: [''],
       description: ['']
     });
   }
 
-  addItem() {
+  addTask() {
     const formData = this.form.value;
 
-    this.taskService.createItem(formData).subscribe(response => {
-      console.log('Item created:', response);
+    this.taskService.addTask(formData).subscribe(response => {
+      console.log('Task added:', response); // remove in future
     });
   }
 }
