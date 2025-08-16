@@ -3,7 +3,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
-import { TaskService } from '../../../services/taskservice';
+import { TaskService } from '../../../services/task.service';
 
 @Component({
   selector: 'app-task-add',
